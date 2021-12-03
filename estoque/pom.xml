@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bcopstein</groupId>
-	<artifactId>SvBkEt6</artifactId>
+	<artifactId>microservicoestoque</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SvBkEt6</name>
+	<name>microservicoestoque</name>
 	<description>Sistema de vendas - Etapa 6</description>
 
 	<properties>

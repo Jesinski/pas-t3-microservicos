@@ -1,0 +1,32 @@
+version: "2"
+services:
+  microservicovendas:
+    networks:
+      microservicos:
+    depends_on:
+      - "microservicogateway"
+    ports:
+      - "8081:8080"
+    build: ./vendas
+    image: "vendas:latest"
+    container_name: vendasServico
+  microservicoestoque:
+    networks:
+      microservicos:   
+    depends_on:
+      - "microservicogateway"
+    ports:
+      - "8082:8080"
+    build: ./estoque
+    image: "estoque:latest"
+    container_name: estoqueServico
+  microservicogateway:
+    networks:
+      microservicos:
+    ports:
+      - "8080:8080"
+    build: ./gateway
+    image: "gateway:latest"
+    container_name: gateway
+networks:
+  microservicos:
