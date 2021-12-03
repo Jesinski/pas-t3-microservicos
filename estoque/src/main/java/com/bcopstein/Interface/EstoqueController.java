@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/vendas")
-public class VendasController {
+@RequestMapping("/estoque")
+public class EstoqueController {
   private MapeadorItemCarrinho mapeadorIC;
   private ListarProdutosUC listarProdutosUC;
   private PodeVenderUC podeVenderUC;
@@ -34,7 +34,7 @@ public class VendasController {
   private ConfirmaVendaUC confirmaVendaUC;
 
   @Autowired
-  public VendasController(ListarProdutosUC listarProdutosUC,
+  public EstoqueController(ListarProdutosUC listarProdutosUC,
                           PodeVenderUC podeVenderUC,
                           CalculaSubtotalUC calculaSubtotalUC,
                           ListaVendasEfetuadasUC listaVendasEfetuadasUC,
